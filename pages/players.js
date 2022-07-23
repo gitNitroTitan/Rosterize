@@ -2,15 +2,15 @@ import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { Button } from 'react-bootstrap';
 import { getPlayers } from '../api/playerData';
-import { useAuth } from '../utils/context/authContext';
+// import { useAuth } from '../utils/context/authContext';
 import PlayerCard from '../components/PlayerCard';
 
 function Players() {
   const [players, setPlayers] = useState([]);
-  const { user } = useAuth();
+  // const { user } = useAuth();
 
   const getAllPlayers = () => {
-    getPlayers(user.uid).then(setPlayers);
+    getPlayers().then(setPlayers);
   };
 
   useEffect(() => {
