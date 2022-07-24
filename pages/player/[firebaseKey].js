@@ -17,14 +17,14 @@ function ViewPlayer() {
   }, [firebaseKey]);
 
   return (
-    <div>
-      <Card style={{ width: '25rem', margin: '10px', borderRadius: '2%' }}>
+    <div className="player-cards">
+      <Card className="indCard" style={{ width: '25rem', margin: '10px', borderRadius: '2%' }}>
         <Card.Img variant="top" src={playerDetails.imageUrl} alt={playerDetails.name} style={{ height: '400px' }} />
         <Card.Body>
           <Card.Title>{playerDetails.name}</Card.Title>
           <p className="card-subtitle mb-2 text-muted">{playerDetails.position}</p>
           <Link href={`/player/edit/${playerDetails.firebaseKey}`} passHref>
-            <Button variant="info">EDIT</Button>
+            <Button className="edit-btn" variant="info">EDIT</Button>
           </Link>
         </Card.Body>
       </Card>
