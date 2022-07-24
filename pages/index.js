@@ -15,9 +15,7 @@ function Home() {
         margin: '0 auto',
       }}
     >
-      <h1>Welcome to the Pack Roster!</h1>
-      <h3>Hello {user.displayName}! </h3>
-      <p>👇👇👇👇👇👇👇👇👇👇</p>
+      <h1>{user.displayName}</h1><br /><h3>Sign in to Rosterize your football team!</h3><br />
       <Button variant="warning" type="button" size="lg" className="copy-btn" onClick={signOut}>
         Sign Out
       </Button>

@@ -44,7 +44,6 @@ function PlayerForm({ playerObj }) {
   return (
     <div className="form">
       <Form onSubmit={handleSubmit}>
-        <h2 className="text-white mt-5">{playerObj.firebaseKey ? 'Update' : 'Create'} Player</h2>
         <FloatingLabel controlId="floatingInput1" label="Full Name" className="mb-3">
           <Form.Control type="text" placeholder="Enter Player's Name" name="name" value={formInput.name} onChange={handleChange} required />
         </FloatingLabel>

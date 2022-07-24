@@ -51,7 +51,20 @@ const viewPlayerDetails = (firebaseKey) => new Promise((resolve, reject) => {
         });
     }).catch((error) => reject(error));
 });
+const filterPlayer = ({ name, position }) => new Promise((resolve, reject) => {
+  getPlayers().then((players) => {
+    let filteredPlayers = [];
+    if (name) {
+      filteredPlayers = players.filter((player) => player.name.toLowerCase() === name.toLowerCase());
+    } else if (position) {
+      filteredPlayers = players.filter((player) => player.position.toLowerCase() === position.toLowerCase());
+    }
+    if (filteredPlayers && filteredPlayers.length > 0) {
+      resolve(filteredPlayers);
+    } else { resolve([]); }
+  }).catch((error) => reject(error));
+});
 
 export {
-  getPlayers, deletePlayer, getSinglePlayer, createPlayer, updatePlayer, viewPlayerDetails,
+  getPlayers, deletePlayer, getSinglePlayer, createPlayer, updatePlayer, viewPlayerDetails, filterPlayer,
 };
