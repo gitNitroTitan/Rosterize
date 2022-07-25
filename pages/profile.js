@@ -9,7 +9,7 @@ function Profile() {
   console.warn(user);
   return (
     <Card style={{
-      width: '40%', height: '90%', textAlign: 'center', margin: '100px auto', borderRadius: '2%',
+      width: '18rem', height: '500px', textAlign: 'center', margin: '100px auto', borderRadius: '2%',
     }}
     >
       <User
