@@ -36,7 +36,7 @@ body {
   margin: 30px;
   border-radius: 20%;
 }
-.card-title, .card-subtitle, .profile-card, .edit-btn{
+.card-title, .card-subtitle, .edit-btn{
   color:black;
   display: flex;
   justify-content: center;
@@ -89,4 +89,10 @@ body {
   justify-content:center;
   align-items:center;
   margin-top: 5%;
+}
+.profile-card{
+  display:flex;
+  flex-direction:column;
+  color:black;
+  
 }

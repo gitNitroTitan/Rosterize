@@ -4,7 +4,7 @@ import Card from 'react-bootstrap/Card';
 import Link from 'next/link';
 import Button from 'react-bootstrap/Button';
 import { viewPlayerDetails } from '../../api/playerData';
-import PlayerCard from '../../components/PlayerCard';
+// import PlayerCard from '../../components/PlayerCard';
 
 function ViewPlayer() {
   const [playerDetails, setPlayerDetails] = useState({});
@@ -28,9 +28,9 @@ function ViewPlayer() {
           </Link>
         </Card.Body>
       </Card>
-      {playerDetails.players?.map((player) => (
+      {/* {playerDetails.players?.map((player) => (
         <PlayerCard key={player.firebaseKey} playerObj={player} />
-      ))}
+      ))} */}
     </div>
   );
 }
