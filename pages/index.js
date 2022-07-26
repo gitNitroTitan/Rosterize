@@ -15,7 +15,7 @@ function Home() {
         margin: '0 auto',
       }}
     >
-      <h1>{user.displayName}</h1><br /><h3>Sign in to Rosterize your football team!</h3><br />
+      <h1>{user.displayName}</h1><br /><h3>Rosterize your football team!</h3><br />
       <Button variant="warning" type="button" size="lg" className="copy-btn" onClick={signOut}>
         Sign Out
       </Button>
