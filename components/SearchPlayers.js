@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 
-export default function Search({ players, setFilteredPlayers }) {
+export default function SearchPlayers({ players, setFilteredPlayers }) {
   const [searchInput, setSearchInput] = useState('');
   const handleChange = (e) => {
     const { value } = e.target;
@@ -16,7 +16,7 @@ export default function Search({ players, setFilteredPlayers }) {
     </>
   );
 }
-Search.propTypes = {
+SearchPlayers.propTypes = {
   players: PropTypes.arrayOf(PropTypes.shape({
     name: PropTypes.string,
     position: PropTypes.string,

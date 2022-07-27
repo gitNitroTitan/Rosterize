@@ -1,0 +1,16 @@
+{
+  "-MiBsfuTafbEQ7eATEST" : {
+    "firebaseKey":"-MiBsfuTafbEQ7eATEST",
+    "name":"Green Bay Packers",
+    "logoUrl":"https://www.festisite.com/static/partylogo/img/logos/packers.png",
+    "conference" : "NFC North",
+    "uid": ""
+  },
+  "-SaintsuTafbEQ7eATEST" : {
+    "firebaseKey":"-SaintsuTafbEQ7eATEST",
+    "name":"New Orleans Saints",
+    "logoUrl":"https://seeklogo.com/images/N/new-orlean-saints-logo-B45C667A4D-seeklogo.com.png",
+    "conference" : "NFC South",
+    "uid": ""
+  }
+}

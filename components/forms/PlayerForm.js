@@ -47,6 +47,9 @@ function PlayerForm({ playerObj }) {
         <FloatingLabel controlId="floatingInput1" label="Full Name" className="mb-3">
           <Form.Control type="text" placeholder="Enter Player's Name" name="name" value={formInput.name} onChange={handleChange} required />
         </FloatingLabel>
+        <FloatingLabel controlId="floatingInput2" label="Team Name" className="mb-3">
+          <Form.Control type="team" placeholder="Enter team name" name="team" value={formInput.team} onChange={handleChange} required />
+        </FloatingLabel>
         <FloatingLabel controlId="floatingInput2" label="Position" className="mb-3">
           <Form.Control type="position" placeholder="Enter position" name="position" value={formInput.position} onChange={handleChange} required />
         </FloatingLabel>
