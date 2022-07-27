@@ -44,6 +44,12 @@ const updatePlayer = (playerObj) => new Promise((resolve, reject) => {
     .catch((error) => reject(error));
 });
 
+// const getPlayersByTeam = (firebaseKey) => new Promise((resolve, reject) => {
+//   axios.get(`${dbUrl}/players.json?orderBy="teamId"&equalTo="${firebaseKey}"`)
+//     .then((response) => resolve(Object.values(response.data)))
+//     .catch((error) => reject(error));
+// });
+
 const viewPlayerDetails = (firebaseKey) => new Promise((resolve, reject) => {
   getSinglePlayer(firebaseKey)
     .then((playerObj) => {

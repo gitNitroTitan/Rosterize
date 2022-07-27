@@ -6,7 +6,7 @@ import { Button } from 'react-bootstrap';
 import { getPlayers } from '../api/playerData';
 import { useAuth } from '../utils/context/authContext';
 import PlayerCard from '../components/PlayerCard';
-import Search from '../components/Search';
+import SearchPlayers from '../components/SearchPlayers';
 
 export default function Players() {
   const [filteredPlayers, setFilteredPlayers] = useState([]);
@@ -15,6 +15,7 @@ export default function Players() {
 
   const getAllPlayers = () => {
     getPlayers(user.uid).then((playersArray) => {
+      console.warn(playersArray);
       setPlayers(playersArray);
       setFilteredPlayers(playersArray);
     });
@@ -28,7 +29,7 @@ export default function Players() {
     <>
       <h1>Team</h1>
       <div className="text-center my-4">
-        <Search players={players} setFilteredPlayers={setFilteredPlayers} />
+        <SearchPlayers players={players} setFilteredPlayers={setFilteredPlayers} />
         <div className="text-center my-4">
           <Link href="/player/new" passHref>
             <Button variant="warning">Add A Player</Button>

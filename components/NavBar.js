@@ -20,8 +20,14 @@ export default function NavBar() {
             <Link passHref href="/">
               <Nav.Link><h4>Home</h4></Nav.Link>
             </Link>
+            <Link passHref href="/teams">
+              <Nav.Link><h4>Teams</h4></Nav.Link>
+            </Link>
+            <Link passHref href="/team/new">
+              <Nav.Link><h4>New Team</h4></Nav.Link>
+            </Link>
             <Link passHref href="/players">
-              <Nav.Link><h4>Team</h4></Nav.Link>
+              <Nav.Link><h4>Players</h4></Nav.Link>
             </Link>
             <Link passHref href="/player/new">
               <Nav.Link><h4>New Player</h4></Nav.Link>
