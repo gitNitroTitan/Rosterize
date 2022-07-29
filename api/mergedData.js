@@ -1,8 +1,8 @@
 import { getSingleTeam, deleteTeam, getTeamPlayers } from './teamData';
 import { getSinglePlayer, deletePlayer } from './playerData';
 
-const viewPlayerDetails = (firebaseKey) => new Promise((resolve, reject) => {
-  getSinglePlayer(firebaseKey)
+const viewPlayerDetails = (teamFirebaseKey) => new Promise((resolve, reject) => {
+  getSinglePlayer(teamFirebaseKey)
     .then((playerObj) => {
       getSingleTeam(playerObj.team_id).then((teamObject) => {
         resolve({ teamObject, ...playerObj });
@@ -11,8 +11,8 @@ const viewPlayerDetails = (firebaseKey) => new Promise((resolve, reject) => {
     .catch((error) => reject(error));
 });
 
-const viewTeamDetails = (firebaseKey) => new Promise((resolve, reject) => {
-  Promise.all([getSingleTeam(firebaseKey), getTeamPlayers(firebaseKey)])
+const viewTeamDetails = (teamFirebaseKey) => new Promise((resolve, reject) => {
+  Promise.all([getSingleTeam(teamFirebaseKey), getTeamPlayers(teamFirebaseKey)])
     .then(([teamObject, teamPlayerArray]) => {
       resolve({ ...teamObject, players: teamPlayerArray });
     }).catch((error) => reject(error));

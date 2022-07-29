@@ -27,7 +27,7 @@ export default function Players() {
 
   return (
     <>
-      <h1>Team</h1>
+      <h1>Players</h1>
       <div className="text-center my-4">
         <SearchPlayers players={players} setFilteredPlayers={setFilteredPlayers} />
         <div className="text-center my-4">

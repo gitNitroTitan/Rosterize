@@ -15,10 +15,10 @@ const getTeams = (uid) => new Promise((resolve, reject) => {
     .catch((error) => reject(error));
 });
 
-const deleteTeam = (firebaseKey, uid) => new Promise((resolve, reject) => {
+const deleteTeam = (firebaseKey) => new Promise((resolve, reject) => {
   axios.delete(`${dbUrl}/teams/${firebaseKey}.json`)
     .then(() => {
-      getTeams(uid).then((teamsArray) => resolve(teamsArray));
+      getTeams().then((teamsArray) => resolve(teamsArray));
     })
     .catch((error) => reject(error));
 });

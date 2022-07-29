@@ -51,12 +51,14 @@ function PlayerForm({ playerObj }) {
           <Form.Control type="text" placeholder="Enter Player's Name" name="name" value={formInput.name} onChange={handleChange} required />
         </FloatingLabel>
         <FloatingLabel controlId="floatingSelect" label="Team">
-          <Form.Select aria-label="Team" name="teamId" onChange={handleChange} className="mb-3" value={playerObj.teamId} required>
+          <Form.Select aria-label="Team" name="team_id" onChange={handleChange} className="mb-3" required>
             <option value="">Select a Team</option>
             {teams.map((team) => (
               <option
                 key={team.firebaseKey}
                 value={team.firebaseKey}
+                defaultValue={playerObj.t === team.firebaseKey}
+
               >
                 {team.name}
               </option>
@@ -82,8 +84,8 @@ PlayerForm.propTypes = {
     name: PropTypes.string,
     imageUrl: PropTypes.string,
     position: PropTypes.string,
+    t: PropTypes.string,
     firebaseKey: PropTypes.string,
-    teamId: PropTypes.string,
   }),
 };
 PlayerForm.defaultProps = {
