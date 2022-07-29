@@ -45,20 +45,10 @@ const updatePlayer = (playerObj) => new Promise((resolve, reject) => {
 });
 
 // const getPlayersByTeam = (firebaseKey) => new Promise((resolve, reject) => {
-//   axios.get(`${dbUrl}/players.json?orderBy="teamId"&equalTo="${firebaseKey}"`)
+//   axios.get(`${dbUrl}/players.json?orderBy="firebaseKey"&equalTo="${firebaseKey}"`)
 //     .then((response) => resolve(Object.values(response.data)))
 //     .catch((error) => reject(error));
 // });
-
-const viewPlayerDetails = (firebaseKey) => new Promise((resolve, reject) => {
-  getSinglePlayer(firebaseKey)
-    .then((playerObj) => {
-      getSinglePlayer(playerObj.firebaseKey)
-        .then((playerObject) => {
-          resolve({ playerObj, ...playerObject });
-        });
-    }).catch((error) => reject(error));
-});
 
 const filterPlayer = ({ name, position }) => new Promise((resolve, reject) => {
   getPlayers().then((players) => {
@@ -75,5 +65,5 @@ const filterPlayer = ({ name, position }) => new Promise((resolve, reject) => {
 });
 
 export {
-  getPlayers, deletePlayer, getSinglePlayer, createPlayer, updatePlayer, viewPlayerDetails, filterPlayer,
+  getPlayers, deletePlayer, getSinglePlayer, createPlayer, updatePlayer, filterPlayer,
 };

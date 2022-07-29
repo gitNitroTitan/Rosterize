@@ -36,8 +36,8 @@ PlayerCard.propTypes = {
     name: PropTypes.string,
     imageUrl: PropTypes.string,
     position: PropTypes.string,
-    team: PropTypes.string,
     firebaseKey: PropTypes.string,
+    team: PropTypes.string,
   }).isRequired,
   onUpdate: PropTypes.func.isRequired,
 };
