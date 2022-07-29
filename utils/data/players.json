@@ -4,6 +4,7 @@
     "imageUrl": "https://e0.365dm.com/21/12/2048x1152/skysports-aaron-rodgers-green-bay-packers_5627299.jpg",
     "name" : "Aaron Rodgers",
     "position" : "Quarterback",
+    "team_id": "-MiBsfuTafbEQ7eATEST",
     "uid": ""
     },
   "-MiBt86VzkC-EGmJnxjm" : {
@@ -11,6 +12,7 @@
     "imageUrl": "https://www.sportsnet.ca/wp-content/uploads/2016/12/matthews_clay.jpg",
     "name" : "Clay Matthews",
     "position" : "Linebacker",
+    "team_id": "-MiBsfuTafbEQ7eATEST",
     "uid": ""
     }
   }

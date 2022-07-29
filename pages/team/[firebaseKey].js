@@ -3,7 +3,7 @@ import { useRouter } from 'next/router';
 import Card from 'react-bootstrap/Card';
 import Link from 'next/link';
 import Button from 'react-bootstrap/Button';
-import { getTeamPlayers } from '../../api/teamData';
+import { viewTeamDetails } from '../../api/mergedData';
 
 function ViewTeam() {
   const [teamDetails, setTeamDetails] = useState({});
@@ -12,7 +12,7 @@ function ViewTeam() {
   const { firebaseKey } = router.query;
 
   useEffect(() => {
-    getTeamPlayers(firebaseKey).then(setTeamDetails);
+    viewTeamDetails(firebaseKey).then(setTeamDetails);
   }, [firebaseKey]);
 
   return (

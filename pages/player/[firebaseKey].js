@@ -3,7 +3,7 @@ import { useRouter } from 'next/router';
 import Card from 'react-bootstrap/Card';
 import Link from 'next/link';
 import Button from 'react-bootstrap/Button';
-import { viewPlayerDetails } from '../../api/playerData';
+import { viewPlayerDetails } from '../../api/mergedData';
 
 function ViewPlayer() {
   const [playerDetails, setPlayerDetails] = useState({});
@@ -21,7 +21,7 @@ function ViewPlayer() {
         <Card.Img variant="top" src={playerDetails.imageUrl} alt={playerDetails.name} style={{ height: '400px' }} />
         <Card.Body>
           <Card.Title>{playerDetails.name}</Card.Title>
-          <p className="card-subtitle mb-2 text-muted">{playerDetails.position}</p>
+          <p className="card-subtitle mb-2 text-muted">{playerDetails.position}<br />{playerDetails.team}</p>
           <Link href={`/player/edit/${playerDetails.firebaseKey}`} passHref>
             <Button className="edit-btn" variant="info">EDIT</Button>
           </Link>
