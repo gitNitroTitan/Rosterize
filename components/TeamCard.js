@@ -1,8 +1,8 @@
 import React from 'react';
+import Link from 'next/link';
 import PropTypes from 'prop-types';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
-import Link from 'next/link';
 import { deleteTeam } from '../api/teamData';
 
 function TeamCard({ teamObj, onUpdate }) {
@@ -37,6 +37,7 @@ TeamCard.propTypes = {
     logoUrl: PropTypes.string,
     conference: PropTypes.string,
     firebaseKey: PropTypes.string,
+    uid: PropTypes.string,
   }).isRequired,
   onUpdate: PropTypes.func.isRequired,
 };

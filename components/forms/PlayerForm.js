@@ -27,6 +27,7 @@ function PlayerForm({ playerObj }) {
 
   const handleChange = (e) => {
     const { name, value } = e.target;
+    console.warn(handleChange);
     setFormInput((prevState) => ({
       ...prevState,
       [name]: value,
@@ -37,6 +38,7 @@ function PlayerForm({ playerObj }) {
     if (playerObj.firebaseKey) {
       updatePlayer(formInput)
         .then(() => router.push(`/player/${playerObj.firebaseKey}`));
+      console.warn(playerObj.firebaseKey);
     } else {
       const payload = { ...formInput, uid: user.uid };
       createPlayer(payload).then(() => {
@@ -57,7 +59,7 @@ function PlayerForm({ playerObj }) {
               <option
                 key={team.firebaseKey}
                 value={team.firebaseKey}
-                defaultValue={playerObj.t === team.firebaseKey}
+                // defaultValue={playerObj.t === team.firebaseKey}
 
               >
                 {team.name}

@@ -4,7 +4,7 @@ import { getSinglePlayer, deletePlayer } from './playerData';
 const viewPlayerDetails = (teamFirebaseKey) => new Promise((resolve, reject) => {
   getSinglePlayer(teamFirebaseKey)
     .then((playerObj) => {
-      getSingleTeam(playerObj.team_id).then((teamObject) => {
+      getSingleTeam(playerObj.teamId).then((teamObject) => {
         resolve({ teamObject, ...playerObj });
       });
     })

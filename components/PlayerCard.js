@@ -16,7 +16,7 @@ function PlayerCard({ playerObj, onUpdate }) {
       <Card.Img variant="top" src={playerObj.imageUrl} alt={playerObj.name} style={{ height: '400px' }} />
       <Card.Body>
         <Card.Title>{playerObj.name}</Card.Title>
-        <p className="card-subtitle mb-2 text-muted">{playerObj.position}<br />{playerObj.team}</p>
+        <p className="card-subtitle mb-2 text-muted">{playerObj.position}</p>
         <Link href={`/player/${playerObj.firebaseKey}`} passHref>
           <Button variant="success">VIEW</Button>
         </Link><br />
@@ -37,7 +37,6 @@ PlayerCard.propTypes = {
     imageUrl: PropTypes.string,
     position: PropTypes.string,
     firebaseKey: PropTypes.string,
-    team: PropTypes.string,
   }).isRequired,
   onUpdate: PropTypes.func.isRequired,
 };

@@ -40,14 +40,14 @@ const createTeam = (teamObj) => new Promise((resolve, reject) => {
     }).catch(reject);
 });
 
-const updateTeam = (teamId) => new Promise((resolve, reject) => {
-  axios.patch(`${dbUrl}/teams/${teamId.firebaseKey}.json`, teamId)
-    .then(() => getTeams(teamId.uid).then(resolve))
+const updateTeam = (teamDetails) => new Promise((resolve, reject) => {
+  axios.patch(`${dbUrl}/teams/${teamDetails.firebaseKey}.json`, teamDetails)
+    .then(() => getTeams(teamDetails.uid).then(resolve))
     .catch((error) => reject(error));
 });
 
 const getTeamPlayers = (teamId) => new Promise((resolve, reject) => {
-  axios.get(`${dbUrl}/players.json?orderBy= "team_id" &equalTo="${teamId}"`)
+  axios.get(`${dbUrl}/players.json?orderBy= "teamId" &equalTo="${teamId}"`)
     .then((response) => resolve(Object.values(response.data)))
     .catch((error) => reject(error));
 });

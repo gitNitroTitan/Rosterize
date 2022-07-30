@@ -6,6 +6,7 @@ import PlayerForm from '../../../components/forms/PlayerForm';
 export default function EditPlayer() {
   const [editPlayers, setEditPlayers] = useState({});
   const router = useRouter();
+
   const { firebaseKey } = router.query;
 
   useEffect(() => {
