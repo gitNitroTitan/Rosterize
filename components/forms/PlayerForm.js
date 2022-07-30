@@ -53,7 +53,7 @@ function PlayerForm({ playerObj }) {
           <Form.Control type="text" placeholder="Enter Player's Name" name="name" value={formInput.name} onChange={handleChange} required />
         </FloatingLabel>
         <FloatingLabel controlId="floatingSelect" label="Team">
-          <Form.Select aria-label="Team" name="playersTeam" onChange={handleChange} className="mb-3" required>
+          <Form.Select aria-label="Team" name="teamName" onChange={handleChange} className="mb-3" required>
             <option value="">Select a Team</option>
             {teams.map((team) => (
               <option

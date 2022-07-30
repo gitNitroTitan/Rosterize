@@ -1,6 +1,6 @@
 @import 'bootstrap/dist/css/bootstrap.css';
 
-.copy-btn, h1, h3{
+h1, h3{
   display: flex;
   justify-content: center;
   align-items: center;
@@ -32,7 +32,7 @@ body {
   margin: 30px;
   border-radius: 20%;
 }
-.card-title, .card-subtitle, .edit-btn{
+.card-title, .card-subtitle{
   color:black;
   display: flex;
   justify-content: center;
@@ -73,15 +73,10 @@ body {
 .sign-out{
   margin-right:5px;
 }
-.indCard{
+.player-cards, .player-card{
   display:flex;
   justify-content:center;
-  align-items:center;
-}
-.player-cards{
-  display:flex;
-  justify-content:center;
-  align-items:center;
+  align-content:center;
   margin-top: 5%;
 }
 .profile-card{
@@ -89,3 +84,25 @@ body {
   flex-direction:column;
   color:black;
 }
+.team-cards{
+  display:flex;
+  justify-content:center;
+  align-content:center;
+  margin-top: 5%;
+}
+.card{
+  display:flex;
+  justify-content:center;
+  align-content:center;
+  margin-top: 5%;
+}
+.card-body{
+  display:flex;
+  flex-direction : column;
+  align-items:center;
+}
+
+.edit-btn, .m-2, .view-btn{
+  width: 200px;
+  margin-bottom: 10px;
+} 

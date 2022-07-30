@@ -18,12 +18,12 @@ const viewTeamDetails = (teamFirebaseKey) => new Promise((resolve, reject) => {
     }).catch((error) => reject(error));
 });
 
-const deleteTeamPlayers = (firebaseKey, uid) => new Promise((resolve, reject) => {
-  getTeamPlayers(firebaseKey)
+const deleteTeamPlayers = (teamId) => new Promise((resolve, reject) => {
+  getTeamPlayers(teamId)
     .then((playerArray) => {
       const deletePlayerPromises = playerArray.map((player) => deletePlayer(player.firebaseKey));
       Promise.all(deletePlayerPromises).then(() => {
-        deleteTeam(firebaseKey, uid).then(resolve);
+        deleteTeam(teamId).then(resolve);
       });
     })
     .catch((error) => reject(error));

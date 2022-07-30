@@ -18,10 +18,10 @@ function TeamCard({ teamObj, onUpdate }) {
         <Card.Title>{teamObj.name}</Card.Title>
         <p className="card-subtitle mb-2 text-muted">{teamObj.conference}</p>
         <Link href={`/team/${teamObj.firebaseKey}`} passHref>
-          <Button variant="success">VIEW TEAM DETAILS</Button>
-        </Link><br />
+          <Button variant="success" className="view-btn">VIEW TEAM DETAILS</Button>
+        </Link>
         <Link href={`/team/edit/${teamObj.firebaseKey}`} passHref>
-          <Button variant="info">EDIT</Button>
+          <Button variant="info" className="edit-btn">EDIT</Button>
         </Link>
         <Button variant="danger" onClick={deleteThisTeam} className="m-2">
           DELETE
