@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
+import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import Link from 'next/link';
-import Button from 'react-bootstrap/Button';
 import { viewTeamDetails } from '../../api/mergedData';
 
 function ViewTeam() {
