@@ -22,6 +22,9 @@ function ViewTeam() {
         <Card.Body>
           <Card.Title>{teamDetails.name}</Card.Title>
           <p className="card-subtitle mb-2 text-muted">{teamDetails.conference}</p>
+          <Link href={`/team/${teamDetails.firebaseKey}`} passHref>
+            <Button variant="success" className="view-btn">VIEW TEAM PLAYERS</Button>
+          </Link>
           <Link href={`/team/edit/${teamDetails.firebaseKey}`} passHref>
             <Button className="edit-btn" variant="info">EDIT</Button>
           </Link>
